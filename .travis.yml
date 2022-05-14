@@ -19,7 +19,7 @@ script:
   - docker tag udagram-api-feed tohuy/udagram-api-feed:v1
   - docker build -t udagram-frontend ./udagram-frontend/
   - docker tag udagram-frontend tohuy/udagram-frontend:v1
-  - docker build -t reverseproxy ./reverseproxy/
+  - docker build -t udagram-reverseproxy ./reverseproxy/
   - docker tag reverseproxy tohuy/reverseproxy:v1
 
 after_success:
@@ -27,4 +27,4 @@ after_success:
   - docker push tohuy/udagram-api-user
   - docker push tohuy/udagram-api-feed
   - docker push tohuy/udagram-frontend
-  - docker push tohuy/reverseproxy
+  - docker push tohuy/udagram-reverseproxy
